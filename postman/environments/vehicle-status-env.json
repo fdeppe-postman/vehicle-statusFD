@@ -1,0 +1,15 @@
+{
+	"id": "093898ee-fdfa-44f6-9e19-76cc3f05376b",
+	"name": "Vehicle Status",
+	"values": [
+		{
+			"key": "url",
+			"value": "https://0bd394f0-e6ee-4f35-bdfb-dc32ba92b163.mock.pstmn.io",
+			"type": "text",
+			"enabled": true
+		}
+	],
+	"_postman_variable_scope": "environment",
+	"_postman_exported_at": "2023-01-31T01:30:06.441Z",
+	"_postman_exported_using": "Postman/10.8.11-230125-1159"
+}
