@@ -6,6 +6,9 @@ info:
   contact: {}
 servers:
   - url: "{{url}}"
+security:
+  - api-key: ""
+
 paths:
   /status:
     get:
