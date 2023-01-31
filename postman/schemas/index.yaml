@@ -7,7 +7,7 @@ info:
 servers:
   - url: "{{url}}"
 security:
-  - api-key: ""
+  - api-key: []
 
 paths:
   /status:
