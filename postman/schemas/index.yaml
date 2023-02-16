@@ -12,7 +12,7 @@ security:
 paths:
   /status:
     get:
-      summary: Complete Status
+      summary: Complete Status check
       description: |
         Upon successful execution, returns a complete status update encompassing all connected elements. 
         
