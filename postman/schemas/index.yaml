@@ -56,9 +56,9 @@ paths:
                   overvolt:
                     type: boolean
                     example: false
-                  car_number:
-                    type: number
-                    example: 12
+                  type:
+                    type: string
+                    example: AMG
                   voltage:
                     type: number
                     example: 14.2
