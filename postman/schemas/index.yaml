@@ -2,7 +2,7 @@
 openapi: 3.0.3
 info:
   title: Vehicle Status
-  version: 1.0.6
+  version: 1.0.5
   contact: {}
 servers:
   - url: "{{url}}"
@@ -12,13 +12,11 @@ security:
 paths:
   /status:
     get:
-      summary: Completed status
+      summary: Complete Status verification
       description: |
         Upon successful execution, returns a complete status update encompassing all connected elements. 
         
         As status checks are core features of the PM connected car experience, this feature is allowed by default in the customer account settings. However, users do have the option to revoke remote status reporting access to APIs and rely only on the car dashboard indicators. Thus, developers should check for a successful response before continuing with any further workflows.  
-
-        Updating description to include battery life. 
 
       operationId: completeStatus
       responses:
@@ -33,8 +31,6 @@ paths:
         Returns a status and health report for all connected battery elements (includes EV batteries as well). 
         
         As status checks are core features of the PM connected car experience, this feature is allowed by default in the customer account settings. However, users do have the option to revoke remote status reporting access to APIs and rely only on the car dashboard indicators. Thus, developers should check for a successful response before continuing with any further workflows.  
-
-        Also looking at vehicle health. 
 
       operationId: battery
       responses:
