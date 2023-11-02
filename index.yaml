@@ -138,7 +138,7 @@ paths:
                       right:
                         open: false
   /status/engine:
-    get:
+    post:
       tags:
         - Engine
       summary: Engine
