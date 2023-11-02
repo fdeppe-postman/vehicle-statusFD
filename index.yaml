@@ -49,7 +49,7 @@ paths:
                     type: number
                     example: 600
                   charging:
-                    type: boolean
+                    type: string
                     example: true
                   health:
                     type: string
