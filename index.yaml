@@ -11,7 +11,7 @@ security:
 
 paths:
   /status:
-    get:
+    post:
       summary: Complete Status
       description: |
         Upon successful execution, returns a complete status update encompassing all connected elements. 
