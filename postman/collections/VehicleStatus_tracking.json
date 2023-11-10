@@ -11,71 +11,7 @@
 			"item": [
 				{
 					"name": "battery",
-					"item": [
-						{
-							"name": "Battery",
-							"id": "8d6ba619-4694-408a-a72e-628bfe11da92",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Accept",
-										"value": "application/json"
-									}
-								],
-								"url": {
-									"raw": "{{baseUrl}}/status/battery",
-									"host": [
-										"{{baseUrl}}"
-									],
-									"path": [
-										"status",
-										"battery"
-									]
-								},
-								"description": "Returns a status and health report for all connected battery elements (includes EV batteries as well). \n\nAs status checks are core features of the PM connected car experience, this feature is allowed by default in the customer account settings. However, users do have the option to revoke remote status reporting access to APIs and rely only on the car dashboard indicators. Thus, developers should check for a successful response before continuing with any further workflows.  \n\nAlso looking at vehicle health. \n"
-							},
-							"response": [
-								{
-									"id": "dd30cf65-ff12-477d-8738-65a1bcfeee0a",
-									"name": "Success",
-									"originalRequest": {
-										"method": "GET",
-										"header": [
-											{
-												"key": "Accept",
-												"value": "application/json"
-											}
-										],
-										"url": {
-											"raw": "{{baseUrl}}/status/battery",
-											"host": [
-												"{{baseUrl}}"
-											],
-											"path": [
-												"status",
-												"battery"
-											]
-										}
-									},
-									"status": "OK",
-									"code": 200,
-									"_postman_previewlanguage": "json",
-									"header": [
-										{
-											"key": "Content-Type",
-											"value": "application/json"
-										}
-									],
-									"cookie": [],
-									"body": "{\n  \"cca\": \"<number>\",\n  \"charging\": \"<string>\",\n  \"health\": \"<string>\",\n  \"install\": \"<string>\",\n  \"overvolt\": \"<boolean>\",\n  \"type\": \"<string>\",\n  \"voltage\": \"<number>\"\n}"
-								}
-							]
-						}
-					],
+					"item": [],
 					"id": "d2a8b446-7c58-4917-b670-3e2b217e8147"
 				},
 				{
@@ -565,51 +501,6 @@
 						}
 					],
 					"id": "fe1c4a9d-e29a-4c83-b212-f1e4d4982eef"
-				},
-				{
-					"name": "Complete Status",
-					"id": "655c0422-a526-4842-8873-c42dea6c23ba",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{baseUrl}}/status",
-							"host": [
-								"{{baseUrl}}"
-							],
-							"path": [
-								"status"
-							]
-						},
-						"description": "Upon successful execution, returns a complete status update encompassing all connected elements. \n\nAs status checks are core features of the PM connected car experience, this feature is allowed by default in the customer account settings. However, users do have the option to revoke remote status reporting access to APIs and rely only on the car dashboard indicators. Thus, developers should check for a successful response before continuing with any further workflows.  \n\nUpdating description to include battery life. \n"
-					},
-					"response": [
-						{
-							"id": "af903203-5bb2-43c9-8c14-66efc060123c",
-							"name": "Status retrived successfully",
-							"originalRequest": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{baseUrl}}/status",
-									"host": [
-										"{{baseUrl}}"
-									],
-									"path": [
-										"status"
-									]
-								}
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "text",
-							"header": [],
-							"cookie": []
-						}
-					]
 				}
 			],
 			"id": "1d496fea-378c-4a11-8263-50c3e72457ed"
@@ -719,6 +610,69 @@
 					"_postman_previewlanguage": "Text",
 					"header": [],
 					"cookie": []
+				}
+			]
+		},
+		{
+			"name": "Battery",
+			"id": "5458f0b6-4823-43e4-8fa1-62fec066562c",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/status/battery",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"status",
+						"battery"
+					]
+				},
+				"description": "Returns a status and health report for all connected battery elements (includes EV batteries as well). \n\nAs status checks are core features of the PM connected car experience, this feature is allowed by default in the customer account settings. However, users do have the option to revoke remote status reporting access to APIs and rely only on the car dashboard indicators. Thus, developers should check for a successful response before continuing with any further workflows.  \n\nAlso looking at vehicle health. \n"
+			},
+			"response": [
+				{
+					"id": "c5be292d-3089-4910-bcf2-9c3a0856195d",
+					"name": "Success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/status/battery",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"status",
+								"battery"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "Text",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n  \"cca\": \"<number>\",\n  \"charging\": \"<string>\",\n  \"health\": \"<string>\",\n  \"install\": \"<string>\",\n  \"overvolt\": \"<boolean>\",\n  \"type\": \"<string>\",\n  \"voltage\": \"<number>\"\n}"
 				}
 			]
 		}
