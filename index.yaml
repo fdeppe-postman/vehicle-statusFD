@@ -25,7 +25,7 @@ paths:
         "200":
           description: "Status retrived successfully"
   /status/battery:
-    get:
+    post:
       tags:
         - Battery
       summary: Battery
